@@ -346,469 +346,180 @@ Para arrumar scroll-x do IE e EDGE.
 body{
 	overflow-x: hidden;
 }
-
-.bullets{
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 5;
+/*=========taproom=========================*/
+.container_tap{
+    width:100%;
+    max-width:1300px;
+    margin:40px auto;
+    padding:20px;
 }
 
-.bullets span{
-	margin:0 10px;
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	cursor: pointer;
-	background-color: #444;
+/* Card Principal */
+
+.card_tap{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
 }
 
-.bullets span.active-slider{
-	background: white;
+/* Cervejaria */
+
+.tap_cervejaria{
+    flex:0 0 300px;
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    position:sticky;
+    top:20px;
 }
 
-section.container-portal{
-	padding: 2rem 0;
+.tap_cervejaria img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #f1f1f1;
 }
 
-.sidebar{
-	float: left;
-	width: 30%;
-}
-/**********barra de pesquisa****************/
-
-.cf:before, .cf:after{
-    content:"";
-    display:table;
-}
- 
-.cf:after{
-    clear:both;
-}
- 
-.cf{
-    zoom:1;
-}    
-
-.search-box {
-  
-  width: 320px;
-  margin: auto;
-  margin-bottom: 1rem;
-}
-  
-.search-box .campo-busca {
-  
-  width: 220px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0px 8px;
-  float: left;
-  font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
-  border: 0;
-  background: #EEE;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
-  border-radius: 15px 0 0 15px;
-
-}
- 
-.search-box .campo-busca:focus {
-    outline: 0;
-    background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
-}
- 
-.search-box .campo-busca::-webkit-input-placeholder {
-   color: #999;
-   font-weight: normal;
-   font-style: italic;
-}
- 
-.search-box .campo-busca:-moz-placeholder {
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
-}
- 
-.search-box .campo-busca:-ms-input-placeholder {
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
-}    
- 
-.search-box button {
-
-  overflow: visible;
-  position: relative;
-  float: right;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
-  font-size:15px;
-  font-weight: bold;
-  color: white;
-  background: var(--base-color-second);
-  border-radius: 0 15px 15px 0;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-
-}
-   
-.search-box button:hover{     
-    background: var(--base-color-second);
-}   
-   
-.search-box button:active,
-.search-box button:focus{   
-    background: #202020;
-    outline: 0;   
-}
- 
-.search-box button:before { 
-    content: '';
-    position: absolute;
-    border-width: 8px 8px 8px 0;
-    border-style: solid solid solid none;
-    border-color: transparent var(--base-color-second) transparent;
-    top: 12px;
-    left: -6px;
-}
- 
-.search-box button:hover:before{
-    border-right-color: var(--base-color-second);
-}
- 
-.search-box button:focus:before,
-.search-box button:active:before{
-        border-right-color: #202020;
-}      
- 
-.search-box button::-moz-focus-inner { 
-    border: 0;
-    padding: 0;
-} 
-/*busca*****************************************************/
-.box-content-sidebar{
-	width: 100%;
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-	margin-bottom: 50px;
-	background: #DDDDDD;
-	padding: 15px;
-	color: #333864;
+.name_cervejaria{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
 }
 
-.box-content-sidebar h3{
-	font-size: 18px;
-	font-weight: normal;
+/* Lista de Chopes */
+
+.chops{
+    flex:1;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
 }
 
+/* Card do Chop */
 
+.chop_unit{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
-.box-content-sidebar input[type=text]{
-	width: 100%;
-	height: 40px;
-	border: 1px solid rgb(220,220,220);
-	border-radius: 8px;
-	padding-left: 8px;
-	margin:10px 0;
+    flex:1 1 340px;
+
+    transition:.3s;
 }
 
-.box-content-sidebar select{
-	width: 100%;
-	height: 40px;
-	border: 1px solid rgb(220,220,220);
-	border-radius: 8px;
-	padding-left: 8px;
-	margin:10px 0;
+.chop_unit:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
-.box-content-sidebar input[type=submit]{
-	cursor: pointer;
-	background: var(--base-color-second);
-	color: white;
-	width: 115px;
-	height: 35px;
-	font-weight: bold;
-	margin:10px 0;
-	border: 0;
-	border-radius: 8px;
+.chop_unit h4{
+    font-size:24px;
+    margin-bottom:18px;
+    color:#222;
 }
 
-.conteudo-portal{
-	float: left;
-	width: 70%;
-	padding-left: 50px;
+.abv,
+.ibu,
+.color,
+.chop_price,
+.chop_growler{
+    margin:10px 0;
+    font-weight:bold;
 }
 
-.box-single-conteudo{
-	margin:15px 0;
-	padding:15px 0;
-	border-bottom: 1px solid #ccc;
+.description{
+    margin:18px 0;
+    line-height:1.7;
+    color:#666;
 }
 
-.box-single-conteudo h2{
-	color: #646464;
-	font-weight: normal;
-	font-size: 22px;
+/* Tablet */
+
+@media (max-width:992px){
+
+    .card_tap{
+        flex-direction:column;
+    }
+
+    .tap_cervejaria{
+        position:static;
+        flex:1;
+        width:100%;
+    }
+
+    .tap_cervejaria img{
+        width:150px;
+        height:150px;
+    }
+
 }
 
-.box-single-conteudo p{
-	color: #646464;
-	font-weight: normal;
-	font-size: 15px;
-	margin-top: 4px;
+/* Celular */
+
+@media (max-width:768px){
+
+    .container{
+        padding:15px;
+    }
+
+    .chops{
+        flex-direction:column;
+    }
+
+    .chop_unit{
+        flex:1;
+        width:100%;
+        padding:20px;
+    }
+
+    .chop_unit h4{
+        font-size:20px;
+    }
+
+    .name_cervejaria{
+        font-size:22px;
+    }
+
 }
 
-.card {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	margin-top: 1.5rem;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
+/* Celulares pequenos */
+
+@media (max-width:480px){
+
+    .tap_cervejaria{
+        padding:20px;
+    }
+
+    .tap_cervejaria img{
+        width:120px;
+        height:120px;
+    }
+
+    .name_cervejaria{
+        font-size:20px;
+    }
+
+    .chop_unit{
+        padding:18px;
+    }
+
+    .description{
+        font-size:15px;
+    }
+
 }
-
-.card img {
-    width: 100%;
-    height: 12.5rem;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-.card a{
-	background: var(--base-color-second);
-	display: inline-block;
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	padding: 0 3px;
-	font-size: 15px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-}
-.card h3 {
-    margin: 15px 0;
-    font-size: 1.5em;
-}
-
-.card p {
-    padding: 0 10px 20px;
-    color: #666;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-/****menu horizontal****/
-.waraper-horizontal{
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0.4rem;
-}
-.center-horizontal{
-	max-width: 100%;
-}
-.menu-categorias {
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    white-space: nowrap;
-}
-
-.menu-categorias::-webkit-scrollbar {
-    display: none;
-}
-
-.menu-categorias ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: max-content;
-}
-
-.menu-categorias li a {
-    display: block;
-    padding: 10px 18px;
-    background: #f2f2f2;
-    color: #333;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-    font-size: 15px;
-}
-
-.menu-categorias li a:hover {
-    background: var(--base-color-second);
-    color: #fff;
-}
-
-.menu-categorias li.active a {
-    background: var(--base-color-second);
-    color: #fff;
-}
-/*Noticia single estilo*/
-
-section.noticia-single{
-	padding: 40px 0;
-	color: #646464;
-}
-
-section.noticia-single header{
-	background-color: transparent;
-}
-section.noticia-single a{
-	background: var(--base-color-second);
-	display: inline-block;
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	padding: 0 3px;
-	font-size: 15px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-}
-
-section.noticia-single h1{
-	font-size: 30px;
-	border-bottom: 2px solid #646464;
-}
-
-section.noticia-single article{
-	margin-top:15px;
-}
-
-section.noticia-single h3,
-section.noticia-single h2{
-	margin:10px 0;
-}
-
-section.noticia-single p{
-	margin:10px 0;
-}
-
-section.noticia-single ul{
-	margin:10px 0;
-	list-style-position: inside;
-}
-
-section.noticia-single img{
-	display: block;
-	margin:0 auto;
-	width: 100%;
-	max-width: 500px;
-	border-radius: 20px;
-}
-
-/*===================================404=================================================*/
-		.wraper-404{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-        .erro-404 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container-404 {
-            text-align: center;
-            max-width: 500px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 40px 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .icon {
-            font-size: 80px;
-            margin-bottom: 20px;
-            animation: bounce 1.5s infinite;
-        }
-
-        h3.title-404 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        p.p-404 {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: white;
-        }
-
-        a.button-404 {
-            background-color: #ff4757;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border: 1px solid #ff4757;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        a.button-404:hover {
-            color: #e84148;
-            background-color: inherit;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @media (max-width: 500px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            .icon {
-                font-size: 60px;
-            }
-        }
- 
+/*=========final taproom=========================*/
 /*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
@@ -819,17 +530,6 @@ section.noticia-single img{
     margin-right: auto;
   }
 
-  .section {
-    padding: 10rem 0;
-  }
-
-  .section header,
-  #testimonials header {
-    max-width: 32rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .button {
     height: 3.125rem;
