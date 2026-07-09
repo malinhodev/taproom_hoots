@@ -1,4 +1,9 @@
 
+const dataAtual = new Date();
+const anoAtual = dataAtual.getFullYear();
+
+document.getElementById('year').innerText = anoAtual;
+
 $('nav.mobile').click(function(){
 		//O que vai acontecer quando clicarmos na nav.mobile!
 		var listaMenu = $('nav.mobile ul');
